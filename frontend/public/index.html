@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kompresion - Kompresi & Konversi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="splash-container" id="splashPage">
+    <div class="logo-anim">
+      <span class="logo-part">K</span>
+      <span class="logo-part">O</span>
+      <span class="logo-part">M</span>
+      <span class="logo-part">P</span>
+      <span class="logo-part">R</span>
+      <span class="logo-part">E</span>
+      <span class="logo-part">S</span>
+      <span class="logo-part">I</span>
+      <span class="logo-part">O</span>
+      <span class="logo-part">N</span>
+    </div>
+    <div class="subtitle">Aplikasi Kompresi & Konversi Canggih</div>
+    <button id="lanjutBtn">Lanjut</button>
+  </div>
+
+  <div class="pilihan-container" id="pilihanPage" style="display:none;">
+    <div class="anim-bg"></div>
+    <div class="pilihan-content">
+      <h2 class="pilihan-title">Pilih Fitur</h2>
+      <div class="pilihan-btn-group">
+        <button class="fitur-btn" id="kompresiBtn">Kompresi Gambar</button>
+        <button class="fitur-btn" id="konversiBtn">Konversi ke PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="kompresi-container" id="kompresiPage" style="display:none;">
+    <div class="anim-bg"></div>
+    <div class="kompresi-content">
+      <h2 class="kompresi-title">Kompresi Gambar</h2>
+      <div class="drop-area" id="dropArea">
+        <input type="file" id="fileInput" accept="image/*" hidden />
+        <div class="drop-text" id="dropText">Drop file gambar di sini atau klik untuk memilih</div>
+      </div>
+      <div class="preview-section" id="previewSection" style="display:none;">
+        <img id="imgPreview" class="img-preview" src="" alt="Preview Gambar" />
+        <div class="slider-group">
+          <label for="compressRange">Kompresi: <span id="compressValue">70</span>%</label>
+          <input type="range" id="compressRange" min="10" max="100" value="70" />
+        </div>
+        <button class="kompres-btn" id="kompresBtn">Kompres</button>
+      </div>
+      <div class="hasil-section" id="hasilSection" style="display:none;">
+        <div>Preview Hasil Kompresi:</div>
+        <img id="imgHasil" class="img-preview" src="" alt="Hasil Kompresi" />
+        <a id="downloadBtn" class="download-btn" href="#" download>Download</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="konversi-container" id="konversiPage" style="display:none;">
+    <div class="anim-bg"></div>
+    <div class="konversi-content">
+      <h2 class="konversi-title">Konversi ke PDF</h2>
+      <div class="drop-area" id="dropAreaKonversi">
+        <input type="file" id="fileInputKonversi" accept="image/*,.txt" hidden />
+        <div class="drop-text" id="dropTextKonversi">Drop gambar atau file teks di sini atau klik untuk memilih</div>
+      </div>
+      <div class="preview-section" id="previewSectionKonversi" style="display:none;">
+        <div id="previewKonversi"></div>
+        <button class="kompres-btn" id="konversiBtnProses">Konversi ke PDF</button>
+      </div>
+      <div class="hasil-section" id="hasilSectionKonversi" style="display:none;">
+        <div>File PDF siap diunduh:</div>
+        <a id="downloadBtnKonversi" class="download-btn" href="#" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="thanks-container" id="thanksPage" style="display:none;">
+    <div class="anim-bg"></div>
+    <div class="thanks-content">
+      <h2 class="thanks-title">Terima Kasih!</h2>
+      <div class="thanks-text">Terima kasih sudah menggunakan aplikasi Kompresion.<br>Semoga bermanfaat untuk Anda!</div>
+      <button class="thanks-btn" id="kembaliBtn">Kembali ke Halaman Utama</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html> 
