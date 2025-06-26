@@ -59,4 +59,4 @@ Aplikasi web untuk kompresi dan konversi file. Mendukung kompresi gambar (JPG, P
     - Buka browser dan akses alamat yang diberikan oleh `serve` (contoh: `http://localhost:3000`).
 
 ---
-Dibuat dengan ❤️ oleh AI.
+
